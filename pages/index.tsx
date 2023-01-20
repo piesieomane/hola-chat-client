@@ -2,7 +2,7 @@ import Head from 'next/head';
 import React from 'react';
 import styles from '../styles/page.module.css';
 
-const Home = () => {
+const Home = ({ title }: { title: string }) => {
   return (
     <div className={styles.container}>
       <Head>
@@ -11,13 +11,62 @@ const Home = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={styles.main}> hello </main>
+      <header>
+        <nav>
+          <img />
+          <a href="/">Home</a>
+          <a href="/events">Events</a>
+          <a href="/about">About Us</a>
+        </nav>
+      </header>
+
+      <main className={styles.main}>
+        <a href="/events/london">
+          <img />
+          <h2>Events in london {title}</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi
+            doloribus velit porro cum laudantium dicta harum, iusto adipisci
+            sapiente necessitatibus reprehenderit id dolorem reiciendis. Dicta
+            voluptatibus quibusdam dolore iure aliquam?
+          </p>
+        </a>
+        <a href="/events/london">
+          <img />
+          <h2>Events in Austrilia</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi
+            doloribus velit porro cum laudantium dicta harum, iusto adipisci
+            sapiente necessitatibus reprehenderit id dolorem reiciendis. Dicta
+            voluptatibus quibusdam dolore iure aliquam?
+          </p>
+        </a>
+        <a href="/events/london1">
+          <img />
+          <h2>Events in Barcelona</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi
+            doloribus velit porro cum laudantium dicta harum, iusto adipisci
+            sapiente necessitatibus reprehenderit id dolorem reiciendis. Dicta
+            voluptatibus quibusdam dolore iure aliquam?
+          </p>
+        </a>
+      </main>
 
       <footer className={styles.footer}>
-        <a href="https://vercel.com?">vercel</a>
+        <p>2023 Time to code - A project</p>
       </footer>
     </div>
   );
 };
 
 export default Home;
+
+export function getServerSideProps() {
+  return {
+    props: {
+      // props for your component
+      title: 'Hello Everyone',
+    },
+  };
+}
