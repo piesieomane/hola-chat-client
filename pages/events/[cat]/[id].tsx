@@ -15,7 +15,7 @@ interface Props {
 const EventsPage: NextPage<Props> = ({ data }) => {
   return (
     <div>
-      <Image src={data.image} width={500} height={300} alt={data.title} />
+      <Image src={data.image} width={1000} height={500} alt={data.title} />
       <h1>{data.title}</h1>
       <p>{data.description}</p>
     </div>

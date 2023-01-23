@@ -4,6 +4,9 @@ import React from 'react';
 import { NextPage } from 'next';
 import Link from 'next/link';
 import styles from '../styles/page.module.css';
+import HomePage from '@/components/home/home-page';
+import Header from '@/components/header/header';
+import Footer from '@/components/footer/footer';
 
 interface Props {
   data: Array<{
@@ -24,34 +27,11 @@ const Home: NextPage<Props> = ({ data }) => {
       </Head>
 
       <div className={styles.container}>
-        <header>
-          <nav>
-            <img />
-            <Link href="/" passHref>
-              Home
-            </Link>
-            <Link href="/events" passHref>
-              Events
-            </Link>
-            <Link href="/about" passHref>
-              About Us
-            </Link>
-          </nav>
-        </header>
+        {/* <Header /> */}
 
-        <main className={styles.main}>
-          {data.map((ev) => (
-            <Link key={ev.id} href={`/events/${ev.id}`}>
-              <Image width={300} height={300} alt={ev.title} src={ev.image} />{' '}
-              <h2>{ev.title}</h2>
-              <p>{ev.description}</p>
-            </Link>
-          ))}
-        </main>
+        <HomePage data={data} />
 
-        <footer className={styles.footer}>
-          <p>2023 Time to code - A project</p>
-        </footer>
+        {/* <Footer /> */}
       </div>
     </>
   );
