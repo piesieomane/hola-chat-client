@@ -27,11 +27,7 @@ const Home: NextPage<Props> = ({ data }) => {
       </Head>
 
       <div className={styles.container}>
-        {/* <Header /> */}
-
         <HomePage data={data} />
-
-        {/* <Footer /> */}
       </div>
     </>
   );
