@@ -4,15 +4,21 @@ import Link from 'next/link';
 
 const HomePage = ({ data }: any) => {
   return (
-    <main>
+    <div className="home_body">
       {data.map((ev) => (
-        <Link key={ev.id} href={`/events/${ev.id}`}>
-          <Image width={300} height={300} alt={ev.title} src={ev.image} />{' '}
-          <h2>{ev.title}</h2>
-          <p>{ev.description}</p>
-        </Link>
+        <div className="card">
+          <Link key={ev.id} href={`/events/${ev.id}`}>
+            <div className="image">
+              <Image width={600} height={400} alt={ev.title} src={ev.image} />{' '}
+            </div>
+            <div className="content">
+              <h2> {ev.title} </h2>
+              <p> {ev.description} </p>
+            </div>
+          </Link>
+        </div>
       ))}
-    </main>
+    </div>
   );
 };
 

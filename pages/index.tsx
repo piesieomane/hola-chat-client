@@ -1,12 +1,10 @@
 import Head from 'next/head';
-import Image from 'next/image';
+
 import React from 'react';
 import { NextPage } from 'next';
-import Link from 'next/link';
-import styles from '../styles/page.module.css';
+
+// import styles from '../styles/page.module.css';
 import HomePage from '@/components/home/home-page';
-import Header from '@/components/header/header';
-import Footer from '@/components/footer/footer';
 
 interface Props {
   data: Array<{
@@ -26,9 +24,7 @@ const Home: NextPage<Props> = ({ data }) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className={styles.container}>
-        <HomePage data={data} />
-      </div>
+      <HomePage data={data} />
     </>
   );
 };

@@ -1,6 +1,6 @@
 import React from 'react';
 import { NextPage } from 'next';
-import Image from 'next/image';
+import SingleEvent from '@/components/events/single-events';
 
 interface Props {
   data: Array<{
@@ -13,13 +13,7 @@ interface Props {
 }
 
 const EventsPage: NextPage<Props> = ({ data }) => {
-  return (
-    <div>
-      <Image src={data.image} width={1000} height={500} alt={data.title} />
-      <h1>{data.title}</h1>
-      <p>{data.description}</p>
-    </div>
-  );
+  return <SingleEvent data={data} />;
 };
 
 export default EventsPage;

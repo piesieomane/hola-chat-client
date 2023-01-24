@@ -3,7 +3,7 @@ import React from 'react';
 const Footer = () => {
   return (
     <footer>
-      <p>2023 Time to code - A project built with Next.Js</p>
+      <p> © 2022 Time to Code - A Project Built with Next.js </p>
     </footer>
   );
 };
