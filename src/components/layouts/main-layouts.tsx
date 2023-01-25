@@ -1,14 +1,17 @@
 import React from 'react';
 import Footer from '../footer/footer';
 import Header from '../header/header';
+import LoginPage from '../auth/login';
 
-const MainLayout = ({ children }) => {
+const MainLayout = ({ children }: any) => {
   return (
     <>
-      <Header />
+      {/* <Header />
       {children}
 
-      <Footer />
+      <Footer /> */}
+      {/* //if authorized can send them to the main page */}
+      <LoginPage />
     </>
   );
 };
