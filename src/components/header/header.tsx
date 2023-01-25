@@ -32,7 +32,7 @@ const Header = () => {
             </ul>
           </nav>
         </div>
-        <p className="title"> Sed ut perspiciatis unde omnis</p>
+        <p className="title"> refactoring</p>
       </div>
     </header>
   );
