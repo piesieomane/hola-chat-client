@@ -6,12 +6,12 @@ import LoginPage from '../auth/login';
 const MainLayout = ({ children }: any) => {
   return (
     <>
-      {/* <Header />
+      <Header />
       {children}
 
-      <Footer /> */}
-      {/* //if authorized can send them to the main page */}
-      <LoginPage />
+      <Footer />
+      {/* //if authorized can send them to the main page
+      {/* <LoginPage /> */}
     </>
   );
 };
