@@ -5,13 +5,7 @@ const Header = () => {
   return (
     <header>
       <div>
-        <div className="topNav">
-          <Image
-            alt="logo"
-            src={'/images/logo_black.png'}
-            width={50}
-            height={50}
-          />
+        <div className="text-green-500">
           <nav>
             <ul>
               <li>
