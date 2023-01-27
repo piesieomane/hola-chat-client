@@ -1,23 +1,26 @@
 import React from 'react';
-import Image from 'next/image';
-import Link from 'next/link';
+import LeftSection from './leftSection';
+import InfoAboutLeftSection from './infoAboutLeftSection';
+import Chat from './chat';
+import AboutPerson from './aboutPerson';
 
 const HomePage = ({ data }: any) => {
   return (
-    <div className="home_body">
-      {data.map((ev) => (
-        <div className="card">
-          <Link key={ev.id} href={`/events/${ev.id}`}>
-            <div className="image">
-              <Image width={600} height={400} alt={ev.title} src={ev.image} />{' '}
-            </div>
-            <div className="content">
-              <h2> {ev.title} </h2>
-              <p> {ev.description} </p>
-            </div>
-          </Link>
+    <div className="flex h-screen ">
+      <div className="bg-neutral-900 w-1/6">
+        <LeftSection />
+      </div>
+      <div className="flex bg-gray-800 w-5/6 border-2 border-neutral-900">
+        <div className="w-1/5">
+          <InfoAboutLeftSection />
         </div>
-      ))}
+        <div className="w-4/5">
+          <Chat />
+        </div>
+        <div className="w-1/5">
+          <AboutPerson />
+        </div>
+      </div>
     </div>
   );
 };

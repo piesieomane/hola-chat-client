@@ -9,7 +9,7 @@ const MainLayout = ({ children }: any) => {
       <Header />
       {children}
 
-      <Footer />
+      {/* <Footer /> */}
       {/* //if authorized can send them to the main page
       {/* <LoginPage /> */}
     </>

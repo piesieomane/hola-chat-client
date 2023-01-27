@@ -5,6 +5,8 @@ import { AiOutlineContacts } from 'react-icons/ai';
 import { FiSettings } from 'react-icons/fi';
 import { BsChatSquareText } from 'react-icons/bs';
 import { FcStatistics } from 'react-icons/fc';
+import { IoMdNotificationsOutline } from 'react-icons/io';
+import { BsToggle2On } from 'react-icons/bs';
 
 const Header = () => {
   return (
@@ -55,14 +57,18 @@ const Header = () => {
             </a>
           </div>
 
-          <div className="flex items-center">
+          <div className="flex items-center justify-between">
             <button className="bg-gray-600 px-3 py-1 text-white hover:bg-gray-700">
-              Dark mode
+              <BsToggle2On />
             </button>
             <button className="bg-gray-600 px-3 py-1 text-white hover:bg-gray-700">
-              Notifications
+              <IoMdNotificationsOutline />
             </button>
-            <div className="relative">
+            <div className="flex items-center ml-3">
+              <div className="bg-gray-800 text-[12px]">
+                <p className="text-white px-2 ">User</p>
+                <p className="text-white px-2 ">555-555-5555</p>
+              </div>
               <Image
                 src="/images/user.jpg"
                 width={10}
@@ -70,10 +76,6 @@ const Header = () => {
                 alt="User profile picture"
                 className="w-8 h-8 rounded-full"
               />
-              <div className="bg-gray-800 absolute right-0">
-                <p className="text-white px-2 py-1">User</p>
-                <p className="text-white px-2 py-1">555-555-5555</p>
-              </div>
             </div>
           </div>
         </div>
