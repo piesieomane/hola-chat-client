@@ -16,27 +16,39 @@ const Nav_Buttons = [
   {
     index: 0,
     icon: <NoteBlank />,
+    name: Resume,
   },
   {
     index: 1,
     icon: <UserSquare />,
+    name: Contacts,
   },
   {
     index: 2,
     icon: <ChartBar />,
+    name: Statistic,
   },
   {
     index: 3,
     icon: <ChatCircleText />,
+    name: Chats,
   },
   {
     index: 4,
     icon: <Gear />,
-  },
-  {
-    index: 5,
-    icon: <Phone />,
+    name: Settings,
   },
 ];
 
-export { Nav_Buttons };
+const Nav_Settings = [
+  {
+    index: 0,
+    icon: <Phone />,
+  },
+  {
+    index: 1,
+    icon: <BellRinging />,
+  },
+];
+
+export { Nav_Buttons, Nav_Settings };
