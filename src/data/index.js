@@ -16,37 +16,37 @@ const Nav_Buttons = [
   {
     index: 0,
     icon: <NoteBlank />,
-    name: Resume,
+    name: 'Resume',
   },
   {
     index: 1,
     icon: <UserSquare />,
-    name: Contacts,
+    name: 'Contacts',
   },
   {
     index: 2,
     icon: <ChartBar />,
-    name: Statistic,
+    name: 'Statistic',
   },
   {
     index: 3,
     icon: <ChatCircleText />,
-    name: Chats,
+    name: 'Chats',
   },
   {
     index: 4,
     icon: <Gear />,
-    name: Settings,
+    name: 'Settings',
   },
 ];
 
 const Nav_Settings = [
   {
-    index: 0,
+    index: 5,
     icon: <Phone />,
   },
   {
-    index: 1,
+    index: 6,
     icon: <BellRinging />,
   },
 ];
