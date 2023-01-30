@@ -41,6 +41,7 @@ const Header = () => {
           }}
           p={1}
         >
+          <Typography></Typography>
           <img src={faker.image.abstract()} alt="Hola Chat" />
         </Box>
         {/* <Stack
