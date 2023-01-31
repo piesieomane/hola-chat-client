@@ -51,4 +51,19 @@ const Nav_Settings = [
   },
 ];
 
-export { Nav_Buttons, Nav_Settings };
+const Profile_Menu = [
+  {
+    title: 'Profile',
+    icon: <User />,
+  },
+  {
+    title: 'Settings',
+    icon: <Gear />,
+  },
+  {
+    title: 'Sign Out',
+    icon: <SignOut />,
+  },
+];
+
+export { Nav_Buttons, Nav_Settings, Profile_Menu };

@@ -1,11 +1,19 @@
 import React from 'react';
 import { Box, Stack, IconButton, Typography, Divider } from '@mui/material';
 import { faker } from '@faker-js/faker';
+
 import { useTheme } from '@mui/material/styles';
 import { Nav_Buttons, Nav_Settings } from '../../data/index';
+import AntSwitch from '../overrides/AntSwitch';
+import ProfileMenu from './ProfileMenu';
 
 const Header = () => {
   const theme = useTheme();
+
+  const onToggleMode = () => {
+    let newPaletteMode = theme.palette.mode === 'light' ? 'dark' : 'light';
+    theme.palette.mode = newPaletteMode;
+  };
 
   const [selectedTab, setSelectedTab] = React.useState(0);
 
@@ -34,15 +42,24 @@ const Header = () => {
       >
         <Box
           sx={{
-            height: 45,
-            width: 64,
+            // height: 45,
+            // width: 64,
             borderRadius: 1.5,
             backgroundColor: theme.palette.primary.main,
           }}
           p={1}
         >
-          <Typography></Typography>
-          <img src={faker.image.abstract()} alt="Hola Chat" />
+          <Typography
+            variant="h5"
+            style={{ fontWeight: 'bold' }}
+            sx={{
+              fontSize: 16,
+              fontWeight: 500,
+              color: '#ffffff',
+            }}
+          >
+            Hola Chat
+          </Typography>
         </Box>
         {/* <Stack
           sx={{ width: 'max-content' }}
@@ -162,6 +179,19 @@ const Header = () => {
               </IconButton>
             );
           })}
+        </Stack>
+        <Stack
+          spacing={4}
+          direction="row"
+          alignItems="center"
+          justifyContent="flex-end"
+        >
+          <AntSwitch
+            defaultChecked={theme.palette.mode === 'dark'}
+            onChange={onToggleMode}
+          />
+          {/* Profile Menu */}
+          <ProfileMenu />
         </Stack>
       </Stack>
     </Box>
