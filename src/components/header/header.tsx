@@ -191,7 +191,7 @@ const Header = () => {
             onChange={onToggleMode}
           />
           {/* Profile Menu */}
-          <Stack direction="row" spacing={6} justifyContent="flex-end">
+          <Stack direction="row" spacing={6}>
             <ProfileMenu />
           </Stack>
         </Stack>
