@@ -24,7 +24,7 @@ const Home: NextPage<Props> = ({ data }) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      {/* <HomePage data={data} /> */}
+      <HomePage data={data} />
     </>
   );
 };
