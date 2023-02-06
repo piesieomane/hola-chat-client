@@ -60,7 +60,7 @@ const ChatElement = ({ img, name, msg, time, unread, online, id }) => {
       // //     searchParams.set('id', id);
       // //     searchParams.set('type', 'individual-chat');
       // //     setSearchParams(searchParams);
-      // //   }} h
+      // //   }} 
       sx={{
         width: '100%',
 
